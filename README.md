@@ -7,7 +7,7 @@ The final assignment of the C course (20465) at The Open University.
 
 Semester 2021 B
 
-Done by Daniel Popov
+Done by Daniel Popov and Maor Maayan 
 
 The Project was graded 93
 
