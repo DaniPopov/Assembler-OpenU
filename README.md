@@ -20,7 +20,6 @@ The Project was graded 93
 - `.ob` - Object file              
 3. Execute the assembler using the following command:
 Run `./assembler yourFileName.as`
-The assembler will output .ent, .ext and .ob files.
   
 ## Files Structure
 - `assembler.c` - Main program.
