@@ -14,12 +14,11 @@ The Project was graded 93
 ## Usage
 
 1. Run `make` to compile the assembler.
-   
-The assembler will generate output files with the same filenames and the following extensions:
+2. The assembler will generate output files with the same filenames and the following extensions:
 - `.ent` - Entries file
 - `.ext` - Externals file
 - `.ob` - Object file              
-2. Execute the assembler using the following command:
+3. Execute the assembler using the following command:
 Run `./assembler yourFileName.as`
 The assembler will output .ent, .ext and .ob files.
   
