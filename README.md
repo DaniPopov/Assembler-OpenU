@@ -23,7 +23,12 @@ Run `./assembler yourFileName.as`
   
 ## Files Structure
 - `assembler.c` - Main program.
+- `code_img.c` - Linked list implementation used to represent Image Code funtions.
+- `data_img.c` - Encode and print the Image Data of the assembler.
+- `extra_structure.c` - Stores and prints the entries and externals varible usage into .ext .ent files.
 - `first_pass.c` - Implementation of the first pass algorithm.
+- `globals.c` - Defines the lookup table and functions getting data from it.
+- 
 - `parser.c` - Parses each line from the input `.as` file as part of `first_pass.c`.
 - `first_analyze.c` - Analyzes the line after it has been parsed by `parser.c`. This is the execution of `first_pass.c`.
 - `second_pass.c` - Implementation of the second pass algorithm.
