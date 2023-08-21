@@ -14,6 +14,7 @@ The Project was graded 93
 ## Usage
 
 1. Run `make` to compile the assembler:
+   
 The assembler will generate output files with the same filenames and the following extensions:
 - `.ent` - Entries file
 - `.ext` - Externals file
