@@ -11,6 +11,9 @@ Done by Daniel Popov and Maor Maayan
 
 The Project was graded 93
 
+University explicit specification for the project:
+
+
 ## Usage
 
 1. Run `make` to compile the assembler.
@@ -21,18 +24,43 @@ The Project was graded 93
 3. Execute the assembler using the following command:
 Run `./assembler yourFileName.as`
   
-## Files Structure
-- `assembler.c` - Main program.
-- `code_img.c` - Linked list implementation used to represent Image Code funtions.
-- `data_img.c` - Encode and print the Image Data of the assembler.
-- `extra_structure.c` - Stores and prints the entries and externals varible usage into .ext .ent files.
-- `first_pass.c` - Implementation of the first pass algorithm.
-- `globals.c` - Defines the lookup table and functions getting data from it.
-- 
-- `parser.c` - Parses each line from the input `.as` file as part of `first_pass.c`.
-- `first_analyze.c` - Analyzes the line after it has been parsed by `parser.c`. This is the execution of `first_pass.c`.
-- `second_pass.c` - Implementation of the second pass algorithm.
-- `errors.c` - Thorough error checking during the first and second pass.
-- `output.c` - Creates `.ext`, `.ent`, and `.ob` output files.
+## Implementation Overview in Brief:
+
+## 1.Macros Stage:
+- The assembler processes the source (.as) file.
+- It replaces macros with their content using a hash table.
+- If it finds syntax errors, it reports them and moves to the next stage.
+- Otherwise, it proceeds to the First Run stage.
+
+## 2.First Pass:
+- The assembler calculates the size of data and instruction sections.
+- It adds symbols to the symbol table.
+- Checks for code errors and logs them.
+- If errors occur, it skips stage 3.
+
+## 3.Between First and Second Pass:
+- If the first run succeeds, the assembler updates data symbol addresses.
+- Allocates memory for the target binary.
+- Resets counters and proceeds to the second run.
+
+## 4.Second Pass:
+- The assembler converts code lines into binary.
+- Inserts binary words into memory.
+- Adds external operands to a table.
+- Reports errors if label operands are missing in the symbol table.
+- Completes the second run without exporting files if errors are found.
+
+## 5.Output Generation:
+- If the second run is error-free, it generates required output files (.ob, .ext, .ent).
+
+The assembler repeats these 5 steps for each source file.
+It ends the program after processing all source files.
+
+
+
+
+
+
+
 
 
