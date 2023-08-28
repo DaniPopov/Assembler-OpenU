@@ -26,7 +26,7 @@ Run `./assembler yourFileName.as`
   
 ## Implementation Overview in Brief:
 
-# 1.Macros Stage:
+### 1.Macros Stage:
 - The assembler processes the source (.as) file.
 - It replaces macros with their content using a hash table.
 - If it finds syntax errors, it reports them and moves to the next stage.
